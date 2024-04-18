@@ -4,6 +4,9 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      imageIdx: 0,
+      titleIdx: 0,
+      textIdx: 0,
       //inserimento dell'array di oggetti nel data
       images: [
         {
@@ -35,6 +38,16 @@ createApp({
     }
   },
   methods: {
-    
+    showNextImg: function () {
+      if (this.imageIdx === this.images.length - 1) {
+        this.imageIdx = 0;
+        this.titleIdx = 0;
+        this.textIdx = 0;
+      } else {
+        this.imageIdx++;
+        this.titleIdx++;
+        this.textIdx++;
+      }
+    }
   }
 }).mount('#app')

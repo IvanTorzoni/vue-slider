@@ -52,13 +52,13 @@
                     <!-- Cambiata scr, titolo e testo dell' immagine tramite Vue -->
                     <img
                       class="img-fluid"
-                      :src="images[0].image"
+                      :src="images[imageIdx].image"
                       alt="Marvel's Spiderman Miles Morale picture"
                     />
                     <div class="item-description px-3">
-                      <h2>{{ images[0].title }}</h2>
+                      <h2>{{ images[titleIdx].title }}</h2>
                       <p>
-                        {{ images[0].text }}
+                        {{ images[textIdx].text }}
                       </p>
                     </div>
                   </div>
@@ -90,7 +90,7 @@
                   </div>
                   <!-- next -->
                   <div class="my-next position-absolute">
-                    <span class="my-next-hook"></span>
+                    <span class="my-next-hook" @click="showNextImg"></span>
                   </div>
                   <!-- immagini interne -->
                   <img
