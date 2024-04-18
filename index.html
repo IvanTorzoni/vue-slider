@@ -49,17 +49,16 @@
                   <!-- immagini -->
                   <!-- immagine 1 -->
                   <div class="my-carousel-item active" carousel-item="1">
+                    <!-- Cambiata scr, titolo e testo dell' immagine tramite Vue -->
                     <img
                       class="img-fluid"
-                      src="./img/01.webp"
+                      :src="images[0].image"
                       alt="Marvel's Spiderman Miles Morale picture"
                     />
                     <div class="item-description px-3">
-                      <h2>Marvel's Spiderman Miles Morale</h2>
+                      <h2>{{ images[0].title }}</h2>
                       <p>
-                        Experience the rise of Miles Morales as the new hero
-                        masters incredible, explosive new powers to become his own
-                        Spider-Man.
+                        {{ images[0].text }}
                       </p>
                     </div>
                   </div>
