@@ -48,6 +48,17 @@ createApp({
         this.titleIdx++;
         this.textIdx++;
       }
+    },
+    showPreviousImg: function () {
+      if (this.imageIdx === 0) {
+        this.imageIdx = this.images.length - 1;
+        this.titleIdx = this.images.length - 1;
+        this.textIdx = this.images.length - 1;
+      } else {
+        this.imageIdx--;
+        this.titleIdx--;
+        this.textIdx--;
+      }
     }
   }
 }).mount('#app')

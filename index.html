@@ -47,7 +47,7 @@
               >
                 <div class="my-carousel-images">
                   <!-- immagini -->
-                  <!-- immagine 1 -->
+                  <!-- immagine  -->
                   <div class="my-carousel-item active" carousel-item="1">
                     <!-- Cambiata scr, titolo e testo dell' immagine tramite Vue -->
                     <img
@@ -62,31 +62,14 @@
                       </p>
                     </div>
                   </div>
-                  <!-- /immagine 1 -->
-  
-                  <!-- immagine 2 -->
-                  <div class="my-carousel-item" carousel-item="1">
-                    <img
-                      class="img-fluid"
-                      src="./img/02.webp"
-                      alt="Ratchet & Clank: Rift Apart"
-                    />
-                    <div class="item-description px-3">
-                      <h2>Ratchet & Clank: Rift Apart</h2>
-                      <p>
-                        Go dimension-hopping with Ratchet and Clank as they take
-                        on an evil emperor from another reality.
-                      </p>
-                    </div>
-                  </div>
-                  <!-- /immagine 2 -->
-  
+                  <!-- /immagine -->
+
                   <!-- etc .... -->
                 </div>
                 <div class="my-thumbnails position-relative">
                   <!-- prev -->
                   <div class="my-previous position-absolute">
-                    <span class="my-prev-hook"></span>
+                    <span class="my-prev-hook " @click="showPreviousImg"></span>
                   </div>
                   <!-- next -->
                   <div class="my-next position-absolute">
