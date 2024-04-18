@@ -25,6 +25,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -32,89 +35,94 @@
   </head>
   <body>
     <main>
-      <div class="container-fluid p-5">
-        <div class="row text-center">
-          <div class="col-12 p-3" id="my-before-carousel"></div>
-
-          <div class="col-12 p-5">
-            <div
-              class="my-carousel-container d-flex flex-column px-5"
-              id="my-carousel"
-            >
-              <div class="my-carousel-images">
-                <!-- immagini -->
-                <!-- immagine 1 -->
-                <div class="my-carousel-item active" carousel-item="1">
+      <div id="app">
+        <div class="container-fluid p-5">
+          <div class="row text-center">
+            <div class="col-12 p-3" id="my-before-carousel"></div>
+  
+            <div class="col-12 p-5">
+              <div
+                class="my-carousel-container d-flex flex-column px-5"
+                id="my-carousel"
+              >
+                <div class="my-carousel-images">
+                  <!-- immagini -->
+                  <!-- immagine 1 -->
+                  <div class="my-carousel-item active" carousel-item="1">
+                    <img
+                      class="img-fluid"
+                      src="./img/01.webp"
+                      alt="Marvel's Spiderman Miles Morale picture"
+                    />
+                    <div class="item-description px-3">
+                      <h2>Marvel's Spiderman Miles Morale</h2>
+                      <p>
+                        Experience the rise of Miles Morales as the new hero
+                        masters incredible, explosive new powers to become his own
+                        Spider-Man.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /immagine 1 -->
+  
+                  <!-- immagine 2 -->
+                  <div class="my-carousel-item" carousel-item="1">
+                    <img
+                      class="img-fluid"
+                      src="./img/02.webp"
+                      alt="Ratchet & Clank: Rift Apart"
+                    />
+                    <div class="item-description px-3">
+                      <h2>Ratchet & Clank: Rift Apart</h2>
+                      <p>
+                        Go dimension-hopping with Ratchet and Clank as they take
+                        on an evil emperor from another reality.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /immagine 2 -->
+  
+                  <!-- etc .... -->
+                </div>
+                <div class="my-thumbnails position-relative">
+                  <!-- prev -->
+                  <div class="my-previous position-absolute">
+                    <span class="my-prev-hook"></span>
+                  </div>
+                  <!-- next -->
+                  <div class="my-next position-absolute">
+                    <span class="my-next-hook"></span>
+                  </div>
+                  <!-- immagini interne -->
                   <img
-                    class="img-fluid"
+                    class="img-fluid my-thumbnail active"
                     src="./img/01.webp"
-                    alt="Marvel's Spiderman Miles Morale picture"
+                    alt="Thumbnail of Marvel's Spiderman Miles Morale picture"
                   />
-                  <div class="item-description px-3">
-                    <h2>Marvel's Spiderman Miles Morale</h2>
-                    <p>
-                      Experience the rise of Miles Morales as the new hero
-                      masters incredible, explosive new powers to become his own
-                      Spider-Man.
-                    </p>
-                  </div>
-                </div>
-                <!-- /immagine 1 -->
-
-                <!-- immagine 2 -->
-                <div class="my-carousel-item" carousel-item="1">
                   <img
-                    class="img-fluid"
+                    class="img-fluid my-thumbnail"
                     src="./img/02.webp"
-                    alt="Ratchet & Clank: Rift Apart"
+                    alt="Thumbnail of Ratchet & Clank: Rift Apart picture"
                   />
-                  <div class="item-description px-3">
-                    <h2>Ratchet & Clank: Rift Apart</h2>
-                    <p>
-                      Go dimension-hopping with Ratchet and Clank as they take
-                      on an evil emperor from another reality.
-                    </p>
-                  </div>
+                  <!-- etc ... -->
                 </div>
-                <!-- /immagine 2 -->
-
-                <!-- etc .... -->
-              </div>
-              <div class="my-thumbnails position-relative">
-                <!-- prev -->
-                <div class="my-previous position-absolute">
-                  <span class="my-prev-hook"></span>
-                </div>
-                <!-- next -->
-                <div class="my-next position-absolute">
-                  <span class="my-next-hook"></span>
-                </div>
-                <!-- immagini interne -->
-                <img
-                  class="img-fluid my-thumbnail active"
-                  src="./img/01.webp"
-                  alt="Thumbnail of Marvel's Spiderman Miles Morale picture"
-                />
-                <img
-                  class="img-fluid my-thumbnail"
-                  src="./img/02.webp"
-                  alt="Thumbnail of Ratchet & Clank: Rift Apart picture"
-                />
-                <!-- etc ... -->
               </div>
             </div>
-          </div>
-
-          <div class="col-12 p-3" id="my-after-carousel">
-            <button id="my-order-button" class="btn btn-primary">
-              Inverti l'ordine di scorrimento
-            </button>
-            <button id="my-stop-button" class="btn btn-primary">
-              Interrompi / Fai ripartire lo scorrimento
-            </button>
+  
+            <div class="col-12 p-3" id="my-after-carousel">
+              <button id="my-order-button" class="btn btn-primary">
+                Inverti l'ordine di scorrimento
+              </button>
+              <button id="my-stop-button" class="btn btn-primary">
+                Interrompi / Fai ripartire lo scorrimento
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </main>
+    
+    <!-- Script -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
